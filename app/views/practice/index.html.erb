@@ -1,0 +1,15 @@
+<% if @name.blank? == false %>
+	Hello <%= @name %>
+<% end %>
+
+<div>
+	<%= link_to "Red", about_path(color: "red"), class: "btn btn-danger" %>
+</div>
+
+<div>
+	<%= link_to "Green", about_path(color: "Green") %>
+</div>
+
+<div>
+	<%= link_to "Blue", about_path(color: "Blue") %>
+</div>
