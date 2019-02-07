@@ -12,13 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :author %>
-    <%= form.text_field :author %>
+    <%= form.hidden_field :user_id, value: current_user.id %>
   </div>
 
   <div class="field">
     <%= form.label :comment_entry %>
-    <%= form.text_area :comment_entry %>
+    <%= form.text_area :comment_entry, class: "form-control" %>
   </div>
 
   <div class="field">
@@ -26,6 +25,6 @@
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Submit", class: "btn btn-primary" %>
   </div>
 <% end %>

@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1 class="well">Posts</h1>
+<p>Welcome <%= current_user.email %></p>
 
 <table class="table">
   <thead>
@@ -16,7 +17,7 @@
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.title %></td>
-        <td><%= post.author %></td>
+        <td><%= post.user.email %></td>
         <td><%= post.blog_entry %></td>
         <td class="btn btn-primary"><%= link_to 'Show', post %></td>
         <td class="btn btn-warning"><%= link_to 'Edit', edit_post_path(post) %></td>
